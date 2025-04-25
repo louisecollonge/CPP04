@@ -7,7 +7,7 @@ Brain::Brain() {
 }
 
 Brain::Brain( const Brain& other ) {
-	for (unsigned long i = 0; i < ideas->length(); ++i)
+	for (unsigned long i = 0; i < 100; ++i)
 		this->ideas[i] = other.ideas[i];
 	std::cout << PINK
 			  << "Brain	copy constructor called."
@@ -22,9 +22,8 @@ Brain::~Brain(){
 
 Brain	&Brain::operator=( const Brain& other )
 {
-	if (this != &other)
-	{
-		for (unsigned long i = 0; i < ideas->length(); ++i)
+	if (this != &other) {
+		for (unsigned long i = 0; i < 100; ++i)
 			this->ideas[i] = other.ideas[i];
 	}
 	return *this;
