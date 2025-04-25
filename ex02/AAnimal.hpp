@@ -18,17 +18,17 @@
 #include <iostream>
 #include <string>
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string	type;
 
 	public:
-		Animal();
-		Animal( const Animal& other );
-		virtual ~Animal();
+		AAnimal();
+		AAnimal( const AAnimal& other );
+		virtual ~AAnimal();
 
-		Animal	&operator=( const Animal& other );
+		AAnimal	&operator=( const AAnimal& other );
 
 		virtual void	makeSound() const = 0; // = 0 makes the function purely virtual, making the whole class "abstract" = non instanciable
 		std::string	getType() const;

@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
@@ -9,7 +9,7 @@ int	main() {
 // array:
 	std::cout << BOLD << "ARRAY :" << RESET << std::endl;
 	int		n = 4;
-	Animal*	array[n];
+	AAnimal*	array[n];
 
 	for (int i = 0; i < n/2; ++i)
 		array[i] = new Dog();
@@ -32,9 +32,9 @@ int	main() {
 
 // individuals:
 	std::cout << BOLD << "INDIVIDUALS :" << RESET << std::endl;
-	const Animal*	j = new Cat();
-	const Animal*	k = new Dog();
-	const Animal*	neo = new Dog();
+	const AAnimal*	j = new Cat();
+	const AAnimal*	k = new Dog();
+	const AAnimal*	neo = new Dog();
 	delete neo;
 	neo = j;
 	std::cout << std::endl;

@@ -6,12 +6,12 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 SRC =	main.cpp \
-			Animal.cpp \
-			Dog.cpp \
-			Cat.cpp \
-			WrongAnimal.cpp \
-			WrongCat.cpp \
-			Brain.cpp
+		AAnimal.cpp \
+		Dog.cpp \
+		Cat.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp \
+		Brain.cpp
 
 OBJ_DIR = obj
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)

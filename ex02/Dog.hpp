@@ -17,11 +17,11 @@
 
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "WrongAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 	private:
 		Brain*	brain;
