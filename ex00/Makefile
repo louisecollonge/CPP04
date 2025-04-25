@@ -1,26 +1,28 @@
 # Variables
 
-$(NAME) = Animals
+NAME = Animals
 
-$(CC) = c++
-$(CFLAGS) = -Wall -Wextra -Werror -g -std=c++98
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
-$(SRC) =	main.cpp \
+SRC =	main.cpp \
 			Animal.cpp \
 			Dog.cpp \
-			Cat.cpp
+			Cat.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp
 
-$(OBJ_DIR) = obj
-$(OBJ) = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
+OBJ_DIR = obj
+OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 # Rules
 
-all : $(NAME)
+all: $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)/%.o : %.cpp
+$(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 

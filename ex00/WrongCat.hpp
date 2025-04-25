@@ -20,14 +20,14 @@
 #include "Animal.hpp"
 #include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		Dog();
-		Dog( const Dog& other );
-		virtual ~Dog(); // virtual because destructor of Animal is virtual
+		WrongCat();
+		WrongCat( const WrongCat& other );
+		virtual ~WrongCat();
 
-		Dog	&operator=( const Dog& other );
+		WrongCat	&operator=( const WrongCat& other );
 
 		void	makeSound() const;
 };

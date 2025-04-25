@@ -17,7 +17,6 @@
 
 #include <iostream>
 #include <string>
-// #include <stdlib.h>
 
 class Animal
 {
@@ -27,9 +26,10 @@ class Animal
 	public:
 		Animal();
 		Animal( const Animal& other );
-		~Animal();
-		Animal	&operator=( const Animal& other );
-		void	makeSound();
+		virtual ~Animal(); // virtual allows destructor polymorphism : calling destructor of Cat/Dog first if necessary, then Animal
 
-		const std::string&	getType();
+		Animal	&operator=( const Animal& other );
+
+		virtual void	makeSound() const; // virtual allows function polymorphism : calling function of Cat/Dog only, if necessary
+		std::string	getType() const;
 };

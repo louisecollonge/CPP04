@@ -18,13 +18,16 @@
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 class Cat : public Animal
 {
 	public:
 		Cat();
 		Cat( const Cat& other );
-		~Cat();
+		virtual ~Cat(); // virtual because destructor of Animal is virtual
+
 		Cat	&operator=( const Cat& other );
-		void	makeSound();
+
+		void	makeSound() const;
 };
