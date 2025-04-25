@@ -17,19 +17,17 @@
 
 #include <iostream>
 #include <string>
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Animal
+class WrongCat : public WrongAnimal
 {
-	protected:
-		std::string	type;
-
 	public:
-		Animal();
-		Animal( const Animal& other );
-		virtual ~Animal();
+		WrongCat();
+		WrongCat( const WrongCat& other );
+		virtual ~WrongCat();
 
-		Animal	&operator=( const Animal& other );
+		WrongCat	&operator=( const WrongCat& other );
 
-		virtual void	makeSound() const;
-		std::string	getType() const;
+		void	makeSound() const;
 };

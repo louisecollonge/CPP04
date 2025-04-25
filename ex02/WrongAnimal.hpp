@@ -18,18 +18,18 @@
 #include <iostream>
 #include <string>
 
-class Animal
+class WrongAnimal
 {
 	protected:
 		std::string	type;
 
 	public:
-		Animal();
-		Animal( const Animal& other );
-		virtual ~Animal();
+		WrongAnimal();
+		WrongAnimal( const WrongAnimal& other );
+		virtual ~WrongAnimal();
 
-		Animal	&operator=( const Animal& other );
+		WrongAnimal	&operator=( const WrongAnimal& other );
 
-		virtual void	makeSound() const;
+		void	makeSound() const;
 		std::string	getType() const;
 };

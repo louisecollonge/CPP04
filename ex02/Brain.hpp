@@ -18,18 +18,14 @@
 #include <iostream>
 #include <string>
 
-class Animal
+class Brain
 {
-	protected:
-		std::string	type;
-
+	private:
+		std::string	ideas[100];
 	public:
-		Animal();
-		Animal( const Animal& other );
-		virtual ~Animal();
+		Brain();
+		Brain( const Brain& other );
+		~Brain();
 
-		Animal	&operator=( const Animal& other );
-
-		virtual void	makeSound() const;
-		std::string	getType() const;
+		Brain	&operator=( const Brain& other );
 };

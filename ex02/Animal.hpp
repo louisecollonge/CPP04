@@ -30,6 +30,6 @@ class Animal
 
 		Animal	&operator=( const Animal& other );
 
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0; // = 0 makes the function purely virtual, making the whole class "abstract" = non instanciable
 		std::string	getType() const;
 };

@@ -17,19 +17,20 @@
 
 #include <iostream>
 #include <string>
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "Brain.hpp"
 
-class Animal
+class Dog : public Animal
 {
-	protected:
-		std::string	type;
-
+	private:
+		Brain*	brain;
 	public:
-		Animal();
-		Animal( const Animal& other );
-		virtual ~Animal();
+		Dog();
+		Dog( const Dog& other );
+		virtual ~Dog(); // virtual because destructor of Animal is virtual
 
-		Animal	&operator=( const Animal& other );
+		Dog	&operator=( const Dog& other );
 
-		virtual void	makeSound() const;
-		std::string	getType() const;
+		void	makeSound() const;
 };
