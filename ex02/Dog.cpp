@@ -17,10 +17,10 @@ Dog::Dog( const Dog& other ) {
 }
 
 Dog::~Dog() {
-	delete brain;
 	std::cout << BLUE
 			  << "Dog	destructor called."
 			  << RESET << std::endl;
+	delete brain;
 }
 
 Dog	&Dog::operator=( const Dog& other ) {

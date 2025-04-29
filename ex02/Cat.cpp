@@ -17,10 +17,10 @@ Cat::Cat( const Cat& other ) {
 }
 
 Cat::~Cat() {
-	delete brain;
 	std::cout << ORANGE
 			  << "Cat	destructor called."
 			  << RESET << std::endl;
+	delete brain;
 }
 
 Cat	&Cat::operator=( const Cat& other ) {

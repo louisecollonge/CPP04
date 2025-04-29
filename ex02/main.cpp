@@ -5,8 +5,9 @@
 #include "WrongCat.hpp"
 #include "Brain.hpp"
 
-int	main() {
-// array:
+int	main() 
+{
+	// array:
 	std::cout << BOLD << "ARRAY :" << RESET << std::endl;
 	int		n = 4;
 	AAnimal*	array[n];
@@ -19,9 +20,9 @@ int	main() {
 
 	for (int i = 0; i < n; ++i) {
 		std::cout << array[i]->getType() 
-				  << " " 
+				  << " [" 
 				  << i 
-				  << ":	" << std::flush;
+				  << "] :	" << std::flush;
 		array[i]->makeSound();
 	}
 	std::cout << std::endl;
@@ -30,21 +31,16 @@ int	main() {
 		delete array[i];
 	std::cout << std::endl;
 
-// individuals:
+	// individuals:
 	std::cout << BOLD << "INDIVIDUALS :" << RESET << std::endl;
 	const AAnimal*	j = new Cat();
 	const AAnimal*	k = new Dog();
-	const AAnimal*	neo = new Dog();
-	delete neo;
-	neo = j;
 	std::cout << std::endl;
 
 	std::cout << j->getType() << ":	" << std::flush;
 	j->makeSound();
 	std::cout << k->getType() << ":	" << std::flush;
 	k->makeSound();
-	std::cout << neo->getType() << ":	" << std::flush;
-	neo->makeSound();
 	
 	std::cout << std::endl;
 	delete j;
