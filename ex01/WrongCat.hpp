@@ -17,7 +17,6 @@
 
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
 #include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal
@@ -25,9 +24,8 @@ class WrongCat : public WrongAnimal
 	public:
 		WrongCat();
 		WrongCat( const WrongCat& other );
-		virtual ~WrongCat();
-
 		WrongCat	&operator=( const WrongCat& other );
+		virtual ~WrongCat();
 
 		void	makeSound() const;
 };

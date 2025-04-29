@@ -18,19 +18,18 @@
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
 #include "Brain.hpp"
 
 class Cat : public Animal
 {
 	private:
 		Brain*	brain;
+
 	public:
 		Cat();
 		Cat( const Cat& other );
+		Cat	&operator=( const Cat& other );
 		virtual ~Cat(); // virtual because destructor of Animal is virtual
 
-		Cat	&operator=( const Cat& other );
-
-		void	makeSound() const;
+		virtual void	makeSound() const;
 };
