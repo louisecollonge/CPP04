@@ -61,6 +61,8 @@ o	A AMateria is like a magic spell. The class is abstract bc a spell doesn't
 o	The Character is like a sorcerer that can be equiped with materias and use them.
 o	The MateriaSource is like a spell book than can "learn" new models of AMateria 
 	through learnMateria() and generate new instances through createMateria(type).
+	Learn = shallow copy: the book contains a pointer to a spell.
+	Create = deep copy: the spell is materialized as a magical object.
 
 
 ~ Interface concept explanation ~
@@ -82,6 +84,7 @@ o	It imposes to every inheriting class to implement all of its virtual functions
 		virtual void	garnish() {...};
 		virtual void	cook(){...};
 	}
-Making a pizza requires all of the functions of the IPizza interface.
+Making a pizza requires all of the virtual methods of the IPizza interface.
+IPizza by itself doesn't create an object pizza, it is only a guideline on how to create one.
 
 */

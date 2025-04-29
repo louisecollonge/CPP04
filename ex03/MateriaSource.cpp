@@ -8,7 +8,7 @@ MateriaSource::MateriaSource() {
 MateriaSource::MateriaSource( const MateriaSource &other ) {
 	for (int i = 0; i < 4; ++i) {
 		if (other.materias[i])
-			this->materias[i] = other.materias[i]->clone();
+			this->materias[i] = other.materias[i]->clone(); // here taking one box of the materia[] array, which is a AMateria object, so we can use .clone() on it
 		else
 			this->materias[i] = NULL;
 	}
@@ -39,7 +39,7 @@ void	MateriaSource::learnMateria( AMateria* m ) {
 	if (m) {
 		for (int i = 0; i < 4; ++i) {
 			if (!materias[i]) {
-				materias[i] = m;
+				materias[i] = m; // shallow copy: stores the m pointer in the array
 				break;
 			}
 		}
@@ -48,9 +48,8 @@ void	MateriaSource::learnMateria( AMateria* m ) {
 
 AMateria*	MateriaSource::createMateria( std::string const &type) {
 	for (int i = 0; i < 4; ++i) {
-		if (materias[i] && materias[i]->getType() == type) {
-			return materias[i]->clone();
-		}
+		if (materias[i] && materias[i]->getType() == type)
+			return materias[i]->clone(); // deep copy: creates a new independant object
 	}
-	return 0; // same as return NULL
+	return 0; // = return NULL
 }
