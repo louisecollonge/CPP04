@@ -29,9 +29,8 @@ class Dog : public AAnimal
 	public:
 		Dog();
 		Dog( const Dog& other );
-		virtual ~Dog(); // virtual because destructor of Animal is virtual
-
 		Dog	&operator=( const Dog& other );
+		virtual ~Dog(); // virtual because destructor of Animal is virtual
 
 		void	makeSound() const;
 };
