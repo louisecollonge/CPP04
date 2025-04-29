@@ -4,8 +4,9 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int	main() {
-// Test with Animal, Cat and Dog:
+int	main() 
+{
+	// Test with Animal, Cat and Dog:
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
@@ -27,7 +28,7 @@ int	main() {
 
 	std::cout << std::endl;
 
-// Test with WrongAnimal and WrongCat:
+	// Test with WrongAnimal and WrongCat:
 	const	WrongAnimal* neo = new WrongAnimal();
 	const	WrongAnimal* k = new WrongCat();
 	{
