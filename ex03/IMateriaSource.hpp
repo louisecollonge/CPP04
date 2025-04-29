@@ -8,7 +8,7 @@
 #include <string>
 #include "AMateria.hpp"
 
-class IMateriaSource
+class IMateriaSource // I for interface. The virtual functions have to be defined by inheriting classes.
 {
 	public:
 		IMateriaSource();
@@ -17,5 +17,9 @@ class IMateriaSource
 		virtual ~IMateriaSource();
 
 		virtual void		learnMateria( AMateria* m ) = 0;
-		virtual AMateria*	createMateria( std::string const &type) = 0;
+		virtual AMateria*	createMateria( std::string const & type ) = 0;
 };
+
+/* 
+MteriaSource is the inheriting concrete class of IMateriaSource.
+*/

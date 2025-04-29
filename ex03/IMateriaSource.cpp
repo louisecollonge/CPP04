@@ -7,3 +7,9 @@ IMateriaSource&	IMateriaSource::operator=( const IMateriaSource& other ) {
 	return *this;
 }
 IMateriaSource::~IMateriaSource() {}
+
+/* 
+Interfaces' methods don't need to be defined, since they are defined by inheriting classes.
+That's why the '=' doesn't do anything here.
+I did them for the compilator's sake.
+*/

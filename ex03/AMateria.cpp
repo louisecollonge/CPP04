@@ -12,3 +12,10 @@ AMateria	&AMateria::operator=( const AMateria& other ) {
 
 std::string const &	AMateria::getType() const { return type; }
 void				AMateria::use(ICharacter& target) { (void)target; }
+
+/* 
+The = overload is implemented here only to respect the canonical form for the subject,
+but since AMateria is non instanciable, it actually cannot be called.
+I decided to assign the type in it, but actually assigning only the type doesn't
+do anything to the materia.
+*/

@@ -24,3 +24,7 @@ class AMateria // Abstract class: cannot be instanciated directly. Inheriting cl
 		virtual AMateria*	clone() const = 0;			// Purely virtual method bc of = 0: makes the whole class abstract.
 		virtual void		use(ICharacter& target);	// Virtual allows polymorphism
 };
+
+/* 
+Ice and Cure are the inheriting concrete classes of AMateria.
+*/

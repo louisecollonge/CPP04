@@ -7,3 +7,9 @@ ICharacter&	ICharacter::operator=( const ICharacter& other ) {
 	return *this;
 }
 ICharacter::~ICharacter() {}
+
+/* 
+Interfaces' methods don't need to be defined, since they are defined by inheriting classes.
+That's why the '=' doesn't do anything here.
+I did them for the compilator's sake.
+*/

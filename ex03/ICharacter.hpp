@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-class AMateria;
+class AMateria; // avoids circular calling between ICharacter.hpp and AMateria.hpp
 
 class ICharacter // I for interface. Defines what a character does. The virtual functions have to be defined by inheriting classes.
 {
