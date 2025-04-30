@@ -26,7 +26,7 @@ class Animal
 	public:
 		Animal();
 		Animal( const Animal& other );
-		virtual ~Animal();
+		virtual ~Animal(); // virtual bc otherwise the destructor of the actuel Cat/Dog object won't be called
 
 		Animal	&operator=( const Animal& other );
 

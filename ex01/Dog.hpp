@@ -32,4 +32,6 @@ class Dog : public Animal
 		virtual ~Dog(); // virtual because destructor of Animal is virtual
 
 		virtual void	makeSound() const;
+		void setIdea(int index, const std::string& idea);
+   		std::string getIdea(int index) const;
 };

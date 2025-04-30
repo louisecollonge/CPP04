@@ -37,6 +37,12 @@ int	main()
 	const Animal*	k = new Dog();
 	const Animal*	meta = new Animal();
 
+	Dog m;
+	m.setIdea(0, "I love you sooo much!");
+	m.setIdea(1, "I love the cat so much too!");
+	Cat l;
+	l.setIdea(0, "I'll kill you all!");
+
 	std::cout << std::endl;
 
 	std::cout << j->getType() << ":	" << std::flush;
@@ -45,6 +51,14 @@ int	main()
 	k->makeSound();
 	std::cout << meta->getType() << ":	" << std::flush;
 	meta->makeSound();
+	std::cout << m.getType() << " has a few ideas:	*" 
+			  << m.getIdea(0) << "* - *" << m.getIdea(1) 
+			  << "* but says: " << std::flush;
+	m.makeSound();
+	std::cout << l.getType() << " has an idea:	*" 
+			  << l.getIdea(0) 
+			  << "* but says: " << std::flush;
+	l.makeSound();
 	
 	std::cout << std::endl;
 	delete j;

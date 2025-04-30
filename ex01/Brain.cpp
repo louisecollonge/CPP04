@@ -28,3 +28,22 @@ Brain	&Brain::operator=( const Brain& other )
 	}
 	return *this;
 }
+
+void Brain::setIdea(int index, const std::string& idea) {
+	if (index >= 0 && index < 100) {
+		ideas[index] = idea;
+	} else {
+		std::cerr << "[" << index 
+				  << "] is a wrong index: cannot set idea in brain" 
+				  << std::endl;
+	}
+}
+
+std::string Brain::getIdea(int index) const {
+	if (index >= 0 && index < 100)
+		return ideas[index];
+	std::cerr << "[" << index
+			  << "] is a wrong index: cannot get idea from brain"
+			  << std::endl;
+	return "";
+}
