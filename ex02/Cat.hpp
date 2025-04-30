@@ -33,4 +33,6 @@ class Cat : public AAnimal
 		virtual ~Cat(); // virtual because destructor of Animal is virtual
 
 		void	makeSound() const;
+		void setIdea(int index, const std::string& idea);
+   		std::string getIdea(int index) const;
 };
