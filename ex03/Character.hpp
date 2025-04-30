@@ -9,7 +9,8 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Character : public ICharacter {
+class Character : public ICharacter
+{
 	private:
 		std::string	name;
 		AMateria*	inventory[4];
@@ -22,6 +23,6 @@ class Character : public ICharacter {
 
 		virtual std::string const&	getName() const;
 		virtual void				equip( AMateria* m );
-		virtual void				unequip( int index );
-		virtual void				use( int index, ICharacter& target );
+		virtual void				unequip( int idx );
+		virtual void				use( int idx, ICharacter& target );
 };

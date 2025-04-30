@@ -48,12 +48,12 @@ void	Character::equip( AMateria* m ) {
 	}
 }
 
-void	Character::unequip( int index ) {
-	if (index >= 0 && index <= 3)
-		inventory[index] = NULL;
+void	Character::unequip( int idx ) {
+	if (idx >= 0 && idx <= 3)
+		inventory[idx] = NULL;
 }
 
-void	Character::use( int index, ICharacter& target ) {
-	if (index >= 0 && index <= 3 && inventory[index]) 
-		inventory[index]->use(target);
+void	Character::use( int idx, ICharacter& target ) {
+	if (idx >= 0 && idx <= 3 && inventory[idx]) 
+		inventory[idx]->use(target);
 }
