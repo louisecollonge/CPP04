@@ -25,9 +25,8 @@ class Cat : public Animal
 	public:
 		Cat();
 		Cat( const Cat& other );
-		virtual ~Cat(); // virtual because destructor of Animal is virtual
-
 		Cat	&operator=( const Cat& other );
+		virtual ~Cat(); // virtual because destructor of Animal is virtual
 
 		virtual void	makeSound() const;
 };

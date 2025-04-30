@@ -26,9 +26,8 @@ class Animal
 	public:
 		Animal();
 		Animal( const Animal& other );
-		virtual ~Animal(); // virtual allows destructor polymorphism : calling destructor of Cat/Dog first if necessary, then Animal
-
 		Animal	&operator=( const Animal& other );
+		virtual ~Animal(); // virtual allows destructor polymorphism : calling destructor of Cat/Dog first if necessary, then Animal
 
 		virtual void	makeSound() const; // virtual allows function polymorphism : calling function of Cat/Dog only, if necessary
 		std::string	getType() const;
