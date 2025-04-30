@@ -5,8 +5,8 @@ Ice::Ice( const Ice& other ) : AMateria( other.type ) {}
 Ice::~Ice() {}
 
 Ice	&Ice::operator=( const Ice& other ) {
-	if (this != &other)
-		this->type = other.type;
+	(void)other;
+	std::cerr << "Please use clone instead of = for materias" << std::endl;
 	return *this;
 }
 

@@ -1,26 +1,26 @@
 #include "Cat.hpp"
 
 Cat::Cat() {
-	brain = new Brain();
 	type = "Cat";
 	std::cout << ORANGE
 			  << "Cat	constructor called."
 			  << RESET << std::endl;
+	brain = new Brain();
 }
 
 Cat::Cat( const Cat& other ) {
-	brain = new Brain(*other.brain); // deep copy by using new object Brain
 	type = other.type;
 	std::cout << ORANGE
 			  << "Cat	copy constructor called."
 			  << RESET << std::endl;
+	brain = new Brain(*other.brain); // deep copy by using new object Brain
 }
 
 Cat::~Cat() {
+	delete brain;
 	std::cout << ORANGE
 			  << "Cat	destructor called."
 			  << RESET << std::endl;
-	delete brain;
 }
 
 Cat	&Cat::operator=( const Cat& other ) {

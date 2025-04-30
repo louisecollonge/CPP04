@@ -5,8 +5,8 @@ Cure::Cure( const Cure& other ) : AMateria( other.type ) {}
 Cure::~Cure() {}
 
 Cure	&Cure::operator=( const Cure& other ) {
-	if (this != &other)
-		this->type = other.type;
+	(void)other;
+	std::cerr << "Please use clone instead of = for materias" << std::endl;
 	return *this;
 }
 
